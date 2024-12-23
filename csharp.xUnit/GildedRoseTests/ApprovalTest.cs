@@ -16,8 +16,8 @@ public class ApprovalTest
     [Fact]
     public Task Foo()
     {
-        Item[] items = { new Item { Name = "foo", SellIn = 0, Quality = 0 } };
-        GildedRose app = new GildedRose(items);
+        Item[] items = { new() { Name = "foo", SellIn = 0, Quality = 0 } };
+        GildedRose app = new(items);
         app.UpdateQuality();
         
         return Verifier.Verify(items);
